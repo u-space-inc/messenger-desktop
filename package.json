@@ -1,0 +1,63 @@
+{
+  "name": "messenger-desktop",
+  "version": "1.0.0",
+  "description": "Facebook Messenger Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": ["messenger", "facebook", "desktop", "electron"],
+  "author": "Manus",
+  "license": "MIT",
+  "packageManager": "pnpm@10.26.0",
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.manus.messenger-desktop",
+    "productName": "Messenger",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "icons/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.social-networking",
+      "icon": "icons/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "icons",
+      "target": ["AppImage", "deb"],
+      "category": "Network"
+    }
+  }
+}
