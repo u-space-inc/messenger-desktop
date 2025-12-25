@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Facebook Messenger Desktop App",
   "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/messenger-desktop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/messenger-desktop/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/messenger-desktop#readme",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
