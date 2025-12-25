@@ -5,12 +5,12 @@
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/messenger-desktop.git"
+    "url": "git+https://github.com/u-space-inc/messenger-desktop.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/messenger-desktop/issues"
+    "url": "https://github.com/u-space-inc/messenger-desktop/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/messenger-desktop#readme",
+  "homepage": "https://github.com/u-space-inc/messenger-desktop#readme",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
@@ -18,7 +18,12 @@
     "build:win": "electron-builder --win",
     "build:linux": "electron-builder --linux"
   },
-  "keywords": ["messenger", "facebook", "desktop", "electron"],
+  "keywords": [
+    "messenger",
+    "facebook",
+    "desktop",
+    "electron"
+  ],
   "author": "Manus",
   "license": "MIT",
   "packageManager": "pnpm@10.26.0",
@@ -45,11 +50,17 @@
       "target": [
         {
           "target": "dmg",
-          "arch": ["x64", "arm64"]
+          "arch": [
+            "x64",
+            "arm64"
+          ]
         },
         {
           "target": "zip",
-          "arch": ["x64", "arm64"]
+          "arch": [
+            "x64",
+            "arm64"
+          ]
         }
       ]
     },
@@ -58,13 +69,18 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },
     "linux": {
       "icon": "icons",
-      "target": ["AppImage", "deb"],
+      "target": [
+        "AppImage",
+        "deb"
+      ],
       "category": "Network"
     }
   }
