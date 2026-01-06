@@ -40,8 +40,6 @@
     "files": [
       "main.js",
       "preload.js",
-      "index.html",
-      "styles.css",
       "icons/**/*"
     ],
     "mac": {

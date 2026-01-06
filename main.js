@@ -25,9 +25,18 @@ function createWindow() {
       webviewTag: false,
       sandbox: true,
     },
-    // macOS specific
-    titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default',
-    trafficLightPosition: { x: 15, y: 15 },
+    /**
+     * Window drag/move affordance:
+     *
+     * On macOS, `titleBarStyle: 'hiddenInset'` makes web contents extend into the
+     * titlebar area. For remote pages (messenger.com), we cannot reliably add a
+     * draggable region (`-webkit-app-region: drag`) without breaking their UI,
+     * which can make the window effectively non-draggable.
+     *
+     * Using the default title bar guarantees a consistent draggable region
+     * across platforms.
+     */
+    titleBarStyle: 'default',
     backgroundColor: '#ffffff',
     show: false, // Don't show until ready
   });
